@@ -47069,7 +47069,7 @@
         }, s), 
         1 == e.IsVeg ? r.a.createElement("span", {
             className: "mr-2"
-        }, "🟩") : r.a.createElement("span", {
+        }, "abc") : r.a.createElement("span", {
             className: "mr-2"
         }, "🟥"),
          1 == e.IsRecommended ? r.a.createElement("span", {
