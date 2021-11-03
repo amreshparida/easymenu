@@ -47066,7 +47066,13 @@
             className: "ml-3 text-dark text-decoration-none w-100"
         }, r.a.createElement("div", {
             className: "item-name"
-        }, s), 1 == e.IsRecommended ? r.a.createElement("span", {
+        }, s), 
+        1 == e.IsVeg ? r.a.createElement("span", {
+            className: "mr-2"
+        }, "&#129001;") : r.a.createElement("span", {
+            className: "mr-2"
+        }, "&#128997;"),
+         1 == e.IsRecommended ? r.a.createElement("span", {
             className: "mb-2 item-badge-v2"
         }, " ", (null == b ? void 0 : b.menu_rec) || "REC", " ") : null, r.a.createElement(en, {
             to: e.more,
@@ -48056,6 +48062,7 @@
                             more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(Vn, "/product/details/").concat(e.id),
                             name: e.name,
                             IsRecommended: e.is_recommended,
+                            IsVeg: t.veg,
                             IsAddToEnable: t.props.is_accept_order,
                             AddToCart: t.AddToCart,
                             currency: v,
@@ -52085,6 +52092,7 @@
                         more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(oa, "/product/details/").concat(e.id),
                         name: e.name,
                         IsRecommended: e.is_recommended,
+                        IsVeg: t.veg,
                         IsAddToEnable: Y.props.is_accept_order,
                         AddToCart: Y.AddToCart,
                         currency: q,
@@ -52352,6 +52360,7 @@
                         more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(ma, "/product/details/").concat(t.id),
                         name: t.name,
                         IsRecommended: t.is_recommended,
+                        IsVeg: t.veg,
                         IsAddToEnable: e.props.is_accept_order,
                         AddToCart: e.AddToCart,
                         currency: c,
