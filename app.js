@@ -47069,9 +47069,9 @@
         }, s), 
         1 == e.IsVeg ? r.a.createElement("span", {
             className: "mr-2"
-        }, "&#129001;") : r.a.createElement("span", {
+        }, "🟩") : r.a.createElement("span", {
             className: "mr-2"
-        }, "&#128997;"),
+        }, "🟥"),
          1 == e.IsRecommended ? r.a.createElement("span", {
             className: "mb-2 item-badge-v2"
         }, " ", (null == b ? void 0 : b.menu_rec) || "REC", " ") : null, r.a.createElement(en, {
