@@ -46959,7 +46959,19 @@
             className: "m-0 product-title-v2"
         }, s), f && f.length ? r.a.createElement("span", {
             className: "item-badge2-v2 margin-left-v2 ml-auto"
-        }, (null == p ? void 0 : p.menu_custom) || "CUSTOMIZABLE", " ") : r.a.createElement("span", null))), r.a.createElement("div", {
+        }, (null == p ? void 0 : p.menu_custom) || "CUSTOMIZABLE", " ") : r.a.createElement("span", null))),
+        
+        1 == e.is_veg ? r.a.createElement("span", {
+            className: "mr-2"
+        }, "🟩") : r.a.createElement("span", {
+            className: "mr-2"
+        }, "🟥"),
+
+        r.a.createElement("span", {
+            className: "mb-2 item-badge-v2"
+        }, "REC",),
+        
+        r.a.createElement("div", {
             className: "d-flex align-items-center"
         }, r.a.createElement("p", {
             className: "total_price font-weight-bold m-0"
@@ -47069,7 +47081,7 @@
         }, s), 
         1 == e.IsVeg ? r.a.createElement("span", {
             className: "mr-2"
-        }, "abc") : r.a.createElement("span", {
+        }, "🟩") : r.a.createElement("span", {
             className: "mr-2"
         }, "🟥"),
          1 == e.IsRecommended ? r.a.createElement("span", {
@@ -48037,6 +48049,7 @@
                         currency: v,
                         price: e.price,
                         photo: e.image_url,
+                        is_veg: e.is_veg,
                         id: e.id,
                         description: e.description
                     })
@@ -48062,7 +48075,7 @@
                             more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(Vn, "/product/details/").concat(e.id),
                             name: e.name,
                             IsRecommended: e.is_recommended,
-                            IsVeg: t.veg,
+                            IsVeg: e.is_veg,
                             IsAddToEnable: t.props.is_accept_order,
                             AddToCart: t.AddToCart,
                             currency: v,
@@ -52026,7 +52039,15 @@
                     class: "font-weight-light text-dark m-0 d-flex align-items-center"
                 }, null !== (s = this.state) && void 0 !== s && null !== (l = s.product[0]) && void 0 !== l && l.addon_items && null !== (u = this.state) && void 0 !== u && null !== (d = u.product[0]) && void 0 !== d && d.addon_items.length ? r.a.createElement("span", {
                     className: "badge badge-danger"
-                }, " ", (null == B ? void 0 : B.customization) || "CUSTOMIZABLE", " ") : null, r.a.createElement("span", {
+                }, " ", (null == B ? void 0 : B.customization) || "CUSTOMIZABLE", " ") : null, 
+                
+                1 == (null === (m = this.state) || void 0 === m || null === (b = m.product[0]) || void 0 === b ? void 0 : b.is_veg) ? r.a.createElement("span", {
+                    className: "mr-2"
+                }, "🟩") : r.a.createElement("span", {
+                    className: "mr-2"
+                }, "🟥"),
+                
+                r.a.createElement("span", {
                     class: "badge badge-danger ml-2"
                 }, null !== (f = this.state) && void 0 !== f && null !== (p = f.product[0]) && void 0 !== p && p.is_active ? (null == B ? void 0 : B.available) || "AVAILABLE" : (null == B ? void 0 : B.not_available) || "NOT AVAILABLE"), 1 == (null === (m = this.state) || void 0 === m || null === (b = m.product[0]) || void 0 === b ? void 0 : b.is_recommended) ? r.a.createElement("span", {
                     class: "badge badge-success ml-2"
@@ -52092,7 +52113,7 @@
                         more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(oa, "/product/details/").concat(e.id),
                         name: e.name,
                         IsRecommended: e.is_recommended,
-                        IsVeg: t.veg,
+                        IsVeg: e.is_veg,
                         IsAddToEnable: Y.props.is_accept_order,
                         AddToCart: Y.AddToCart,
                         currency: q,
@@ -52360,7 +52381,7 @@
                         more: "".concat(_.STORE.INDEX.PAGES.DETAILED.PATH, "/").concat(ma, "/product/details/").concat(t.id),
                         name: t.name,
                         IsRecommended: t.is_recommended,
-                        IsVeg: t.veg,
+                        IsVeg: e.is_veg,
                         IsAddToEnable: e.props.is_accept_order,
                         AddToCart: e.AddToCart,
                         currency: c,
