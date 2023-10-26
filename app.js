@@ -51593,7 +51593,7 @@
                 
                 
 
-                if (document.getElementById("is_payTm").checked == true)
+                if (document.querySelectorAll("is_payTm").length>0 && document.getElementById("is_payTm").checked == true)
                 {
                     e['is_payTm'] = 1;
                     e['payment_type'] = "PAYTM";
